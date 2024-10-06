@@ -20,10 +20,10 @@ about.addEventListener("click", function (e) {
   }
 
   if (id === "red") {
-    img.src = "./r.webp"; 
+    img.src = "images/r.webp"; 
   } if (id === "green") {
-    img.src = "./g.webp"; 
+    img.src = "images/g.webp"; 
   } if (id === "blue") {
-    img.src = "./b.webp"; 
+    img.src = "images/b.webp"; 
   }
 });
