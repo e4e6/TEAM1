@@ -3,6 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>메인 페이지</title>
+    <style>
+        #main_container {
+            width: 390px;
+            height: 850px;
+            background-color: #000;
+            position: relative;
+            padding: 10px;
+        }
+        #main-date-container {
+            width: 250px;
+            height: 40px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        #date {
+            width: 140px;
+            height: 25px;
+            color: #fff;
+        }
+        #day {
+            width: 100px;
+            height: 25px;
+            color: #fff;
+        }
+        #top-container {
+            position: relative;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        .top-today-button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+        }
+
+        .top-tomorrow-button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+        }
+
+        #plus-box {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .top-plus-button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+        }
+
+        #schedule-container {
+            position: relative;
+        }        
+    </style>
 </head>
 <body>
     <div id="main_container">
@@ -11,10 +70,9 @@
             <a id="day"></a>
         </div>
         <div id="top-container">
-            <div id="day-hhbox">
+            <div id="day-box">
                 <a><input class="top-today-button" type="button" value="오늘"></a>
                 <a><input class="top-tomorrow-button" type="button" value="내일"></a>
-                <button id="top-plus-button">+</button>
             </div>
             <div id="plus-box">
                 <a><input onclick="location.href='tasks.html'" class="top-plus-button" type="button" value="+"></a>
