@@ -1,36 +1,97 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>2DAYTODAY</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+    <title>메인 페이지</title>
+    <style>
+        #main_container {
+            width: 390px;
+            height: 850px;
+            background-color: #000;
+            position: relative;
+            padding: 10px;
+        }
+        #main-date-container {
+            width: 250px;
+            height: 40px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        #date {
+            width: 140px;
+            height: 25px;
+            color: #fff;
+        }
+        #day {
+            width: 100px;
+            height: 25px;
+            color: #fff;
+        }
+        #top-container {
+            position: relative;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        .top-today-button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+        }
+
+        .top-tomorrow-button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+        }
+
+        #plus-box {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .top-plus-button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+        }
+
+        #schedule-container {
+            position: relative;
+        }        
+    </style>
 </head>
-
 <body>
-    <header>
-        <img src="assets\images\main-background.png" alt="Main Background" class="main-image">
-        <h1>2DAYTODAY</h1>
-    </header>
+    <div id="main_container">
+        <div id="main-date-container">
+            <a id="date"></a>
+            <a id="day"></a>
+        </div>
+        <div id="top-container">
+            <div id="day-box">
+                <a><input class="top-today-button" type="button" value="오늘"></a>
+                <a><input class="top-tomorrow-button" type="button" value="내일"></a>
+            </div>
+            <div id="plus-box">
+                <a><input onclick="location.href='tasks.html'" class="top-plus-button" type="button" value="+"></a>
+            </div>
+        </div>
+        <div id="schedule-container">
+            <div id="main-today-box">
 
-    <main>
-        <!-- ▼ 할일 목록 여기에 추가 예정 아직 기능은 미구현 --> 
+            </div>
+            <div id="main-tomorrow-box">
 
-        <!--         
-        <section id="task-list">
-        </section>
-         -->
-
-        <button id="add-task">Add Task</button>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 2DAYTODAY</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+            </div>
+        </div>
+    </div>
 </body>
-
+<script>
+    let today = new Date();
+    var day_check = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+    document.getElementById('date').innerText = `${today.getFullYear()}년 ${today.getMonth()+1}월 ${today.getDate()}일`;
+    document.getElementById("day").innerText = day_check[today.getDay()];
+</script>
 </html>
